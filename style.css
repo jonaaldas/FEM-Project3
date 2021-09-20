@@ -1,0 +1,140 @@
+/* Mobile first */
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+
+.img--1{
+    background-image: url("/images/icon-sedans.svg");
+}
+
+.img--2{
+    background-image: url("/images/icon-suvs.svg");
+}
+
+.img--3{
+    background-image: url("/images/icon-luxury.svg");
+}
+
+
+.cont--1{
+    background-color:hsl(31, 77%, 52%);
+}
+.cont--2{
+    background-color:hsl(184, 100%, 22%);
+}
+.cont--3{
+    background-color:hsl(179, 100%, 13%);
+}
+
+.btn{
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: solid white;
+    border-radius: 15px;
+    width: 140px;
+}
+
+.btn--1{
+    color:hsl(31, 77%, 52%);
+}
+
+.btn--2{
+    color: hsl(184, 100%, 22%);
+}
+
+.btn--3{
+    color:hsl(179, 100%, 13%)
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: white;
+    font-size: 40px;
+}
+
+p,button{
+    font-family: 'Lexend Deca', sans-serif;
+    color: white
+}
+
+
+
+
+@media(min-width: 676px){
+    html{
+        height: 100%;
+    }
+    .cont{
+        display: flex;
+        width: 850px;
+        height: 450px;
+    }
+    .cont--1, .cont--2, .cont--3{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 20px 50px 40px;  
+    }
+
+    .cont--1{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .cont--3{
+        border-radius: 0 10px 10px 0;
+    }
+
+
+    .img--1, .img--2, .img--3{
+        flex-grow: 0.5;
+    }
+
+    h1,p{
+        flex-grow: 1;;
+    }
+
+    h1{
+        height: 0px;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 675px) {
+    html{
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        background-color: hsla(0, 0%, 100%, 0.75)
+    }
+    .cont{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 315px; 
+    }
+    .cont--1, .cont--2, .cont--3{
+        padding: 50px 20px 50px 40px;
+        color: white;
+    }
+    .cont--1{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .cont--3{
+        border-radius: 0 0 10px 10px;
+    }
+
+    .cont--1{
+        flex: 1;
+    }
+}
